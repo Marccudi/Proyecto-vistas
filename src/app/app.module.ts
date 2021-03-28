@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,11 +12,13 @@ import { ForgotComponent } from './Login/forgot/forgot.component';
 import { RegisterComponent } from './Login/register/register.component';
 import { LibrosComponent } from './Libros/libros/libros.component';
 import { NuevoComponent } from './Libros/nuevo/nuevo.component';
-import { PerfilComponent } from './Usuarios/perfil/perfil.component';
-import { MislibrosComponent } from './Usuarios/mislibros/mislibros.component';
+import { PerfilComponent } from './Empleado/perfil/perfil.component';
+import { MislibrosComponent } from './Empleado/mislibros/mislibros.component';
 import { PerfillibroComponent } from './Libros/perfillibro/perfillibro.component';
 import { PedirlibroComponent } from './Libros/pedirlibro/pedirlibro.component';
 import { VotoComponent } from './Libros/voto/voto.component';
+import { authInterceptorProviders } from './_helpers/auth.interceptor';
+
 
 @NgModule({
   declarations: [
@@ -34,9 +38,12 @@ import { VotoComponent } from './Libros/voto/voto.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  //providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

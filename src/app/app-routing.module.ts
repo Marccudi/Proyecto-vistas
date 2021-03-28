@@ -10,8 +10,8 @@ import { ForgotComponent } from './Login/forgot/forgot.component';
 import { LoginComponent } from './Login/login/login.component';
 import { RegisterComponent } from './Login/register/register.component';
 import { MainComponent } from './Main/main/main.component';
-import { MislibrosComponent } from './Usuarios/mislibros/mislibros.component';
-import { PerfilComponent } from './Usuarios/perfil/perfil.component';
+import { MislibrosComponent } from './Empleado/mislibros/mislibros.component';
+import { PerfilComponent } from './Empleado/perfil/perfil.component';
 
 const routes: Routes = [
   {path:'', pathMatch:'full', redirectTo:'login'},

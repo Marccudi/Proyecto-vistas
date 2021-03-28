@@ -12,33 +12,32 @@
               <div class="text-center">
                 <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
               </div>
-              <form class="user">
+              <form class="user" *ngIf="!isSuccessful" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm"
+                novalidate>
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="text" class="form-control form-control-user" id="Nombre"
-                      placeholder="Nombre">
+                    <input type="text" class="form-control form-control-user" id="Nombre" name="nombre" placeholder="Nombre" [(ngModel)]="from.nombre">
                   </div>
                   <div class="col-sm-6">
                     <input type="text" class="form-control form-control-user" id="Apellido1"
-                      placeholder="Primer apellido">
+                      placeholder="Primer apellido" name="apellido1" [(ngModel)]="from.apellido1" #apellido1="ngModel">
                   </div>
 
                 </div>
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
                     <input type="text" class="form-control form-control-user" id="Apellido2"
-                      placeholder="Segundo apellido">
+                      placeholder="Segundo apellido" name="apellido2" [(ngModel)]="from.apellido2" #apellido2="ngModel">
                   </div>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control form-control-user" id="user"
-                    placeholder="Usuario">
+                    <input type="text" class="form-control form-control-user" id="username" name="username" placeholder="Usuario" [(ngModel)]="from.username" #username="ngModel">
                   </div>
                 </div>
 
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
                     <input type="password" class="form-control form-control-user" id="Password"
-                      placeholder="Contraseña">
+                      placeholder="Contraseña" name="password" [(ngModel)]="from.password" #password="ngModel">
                   </div>
                   <div class="col-sm-6">
                     <input type="password" class="form-control form-control-user" id="RepetirPassword"
@@ -46,24 +45,32 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <input type="email" class="form-control form-control-user" id="Email"
-                    placeholder="Correo Electronico">
+                  <input type="email" class="form-control form-control-user" id="correo"
+                    placeholder="Correo Electronico" name="correo" [(ngModel)]="from.correo" #correo="ngModel">
                 </div>
 
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="text" class="form-control form-control-user" id="Telefono"
-                      placeholder="Telefono">
+                    <input type="text" class="form-control form-control-user" name="telefono" id="Telefono" placeholder="Telefono" [(ngModel)]="from.telefono" #telefono="ngModel">
                   </div>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control form-control-user" id="DNI"
-                      placeholder="DNI">
+                    <input type="text" class="form-control form-control-user" id="DNI" name="dni" placeholder="DNI" [(ngModel)]="from.dni" #dni="ngModel">
                   </div>
                 </div>
-                <a href="login" class="btn btn-primary btn-user btn-block">
+                <!-- <a href="login" class="btn btn-primary btn-user btn-block form-group">
                   Register Account
-                </a>
+                </a> -->
+                <div class="form-group">
+                  <button class="btn btn-primary btn-block">Sign Up</button>
+                </div>
+                <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+                  Signup failed!<br />{{ errorMessage }}
+
+                </div>
               </form>
+              <div class="alert alert-success" *ngIf="isSuccessful">
+                Your registration is successful!
+              </div>
               <hr>
               <div class="text-center">
                 <a class="small" href="login/forgot">Forgot Password?</a>
