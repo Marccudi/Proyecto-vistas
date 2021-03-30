@@ -12,11 +12,11 @@ export class TrabajadorService {
   constructor(private http: HttpClient) { }
 
   getTrabajador(id: number): Observable<any>{
-    return this.http.get('$ {this.baseUrls}/${id}');
+    return this.http.get(`$ {this.baseUrls}/${id}`);
   }
 
   getTrabajadorxuser(user: string): boolean{
-    if (this.http.get('$ {this.baseUrlu}/${user}')) {
+    if (this.http.get(`$ {this.baseUrlu}/${user}`)) {
       console.log(true);
       return true;
     }else{
@@ -26,18 +26,18 @@ export class TrabajadorService {
   }
 
   createTrabajador(Trabajador: Object): Observable<Object>{
-    return this.http.post('${this.baseUrls}', Trabajador);
+    return this.http.post(`${this.baseUrls}`, Trabajador);
   }
 
   updateTrabajador(id: number, value: any): Observable<Object>{
-    return this.http.put('${this.baseUrls}/${id}', value);
+    return this.http.put(`${this.baseUrls}/${id}`, value);
   }
 
   deleteTrabajador(id: number): Observable<any>{
-    return this.http.delete('${this.baseUrls}/${id}', {responseType: 'text'});
+    return this.http.delete(`${this.baseUrls}/${id}`, {responseType: 'text'});
   }
 
   getTrabajadorsList(): Observable<any>{
-    return this.http.get('${this.baseUrlp}');
+    return this.http.get(`${this.baseUrlp}`);
   }
 }

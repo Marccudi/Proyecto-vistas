@@ -92,7 +92,7 @@
       <div id="content">
 
         <!-- Topbar -->
-        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-2 shadow">
 
           <!-- Sidebar Toggle (Topbar) -->
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -183,10 +183,11 @@
             <div class="topbar-divider d-none d-sm-block"></div>
 
             <!-- Nav Item - User Information -->
+            <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Marc Cuenca Díaz</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Marc Cuenca Diaz</span>
                 <img class="img-profile rounded-circle" src="assets/img/undraw_profile.svg">
               </a>
               <!-- Dropdown - User Information -->
@@ -211,91 +212,89 @@
           </ul>
 
         </nav>
-        <!-- End of Topbar -->
-        <div class="container">
-                  <!-- Page Heading -->
-                  <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">Pedir Libro</h1>
-                  </div>
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
 
-
-        <!-- DataTales Example -->
-        <div class="card shadow mb-4">
-          <!-- <div class="card-header py-3">
-    <h6 class="m-0 font-weight-bold text-primary">Datos del libro</h6>
-  </div> -->
-          <div class="card-body">
-            <form>
-              <div class="form-row">
-                <div class="form-group col-md-12">
-                  <label><strong>Titulo</strong></label>
-                  <input type="text" readonly class="form-control" required
-                  id="titulo" name="titulo" [(ngModel)]="libro.titulo"
-                  >
-                </div>
-                <div class="form-group col-md-6">
-                  <label><strong>Genero</strong></label>
-                  <input type="text" readonly class="form-control" required
-                  id="genero" name="genero" [(ngModel)]="libro.genero">
-                </div>
-                <div class="form-group col-md-6">
-                  <label><strong>Fecha</strong></label>
-                  <input type="text" readonly class="form-control" required
-                  id="fecha" name="fecha" [(ngModel)]="libro.fecha">
-                </div>
-                <div class="form-group col-md-6">
-                  <label><strong>ISBN</strong></label>
-                  <input type="text" readonly class="form-control" required
-                  id="isbn" name="isbn" [(ngModel)]="libro.isbn">
-                </div>
-                <div class="form-group col-md-6">
-                  <label><strong>Idioma</strong></label>
-                  <input type="text" readonly class="form-control" required
-                  id="idioma" name="idioma" [(ngModel)]="libro.idioma.nombre">
-                </div>
-                <div class="form-group col-md-6">
-                  <label><strong>Editorial</strong></label>
-                  <input type="text" readonly class="form-control" required
-                  id="editorial" name="editorial" [(ngModel)]="libro.editorial.nombre">
-                </div>
-                <div class="form-group col-md-6">
-                  <label><strong>Autor</strong></label>
-                  <input type="text" readonly class="form-control"
-                  id="autor" name="autor" [(ngModel)]="libro.autor.nombre">
-                </div>
-                <div class="form-group col-md-6">
-                  <label><strong>Dueño</strong></label>
-                  <input type="text" readonly class="form-control" required
-                    id="duenyou" name="duenyou" value="Mathias Debrun">
-                </div>
-                <div class="form-group col-md-6">
-                  <label><strong> Email </strong></label>
-                  <input type="text" readonly class="form-control" required
-                  id="duenyoc" name="duenyoc" value="Mathias_Debrun@hotmail.com">
-                </div>
-              </div>
-
-
-              <a href="home" class="btn btn-primary btn-icon-split">
-                <span class="text">Pedir Libro</span>
-              </a>
-              <a href="libros/voto/1" class="btn btn-primary btn-icon-split">
-                <span class="text">Votar</span>
-            </a>
-              <a href="libros" class="btn btn-primary btn-icon-split">
-                <span class="text">Atras</span>
-              </a>
-            </form>
-
-
-
-          </div>
         </div>
         <!-- /.container-fluid -->
+        <!-- Masthead-->
+
+
+
 
       </div>
       <!-- End of Main Content -->
 
+
+      <div class="container bootstrap snippets bootdey">
+          <section id="team" class="white-bg padding-top-bottom">
+          <div class="container bootstrap snippets bootdey">
+
+            <h1 class="section-description text-gray text-center my-4 ">Conoce al equipo</h1>
+            <p class="section-description text-center">Somos un equipo pequeño con grandes habilidades. Vea las caras detrás de las líneas de código.
+            </p>
+            <div class="row member-content my-4">
+              <div class="col-sm-3 col-sm-offset-1 member-thumb  fade-right in">
+                <img class="img-responsive img-center img-thumbnail img-circle" src="https://image.freepik.com/vector-gratis/diseno-ilustracion-vector-personaje-avatar-hombre-joven_24877-18514.jpg" alt="">
+                <h4>Marc Cuenca</h4>
+                <p class="title">FullStack Developer</p>
+              </div>
+              <div class="col-sm-7">
+                <div class="details">
+                  <p>Soy un programador al cual le encanta programar y mejorar día a día la calidad de mi código. <br><br>Mi gran pasión por aprender impulsa el trabajo en equipo gracias a la posibilidad de enseñar y aprender de otros miembros del equipo.</p>
+                  <ul class="social-content">
+                    <li><a href="mailto:mail@example.com"><i class="fa fa-envelope fa-fw"></i></a></li>
+                    <li><a href="#link"><i class="fa fa-twitter fa-fw"></i></a></li>
+                    <li><a href="#link"><i class="fa fa-facebook fa-fw"></i></a></li>
+                    <li><a href="#link"><i class="fa fa-linkedin fa-fw"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row member-content left">
+              <div class="col-sm-3 col-sm-push-8 member-thumb">
+                <img  class="img-responsive img-center img-thumbnail img-circle" src="https://image.freepik.com/vector-gratis/diseno-ilustracion-vector-personaje-avatar-mujer-joven_24877-18513.jpg" alt="">
+                <h4>Estefania Colombo</h4>
+                <p class="title">FullStack Developer</p>
+              </div>
+              <div class="col-sm-7 col-sm-pull-2">
+                <div class="details">
+                  <p>Desde siempre apasionada por el mundo de las tecnologías. Ofreciendo en cada proyecto
+                    total dedicación, no hay desafio que se me resista.<br><br>
+                     Continuamente aprendiendo y adquiriendo nuevas habilidades
+                     en función a las futuras demandas y tendencias tecnológicas. </p>
+                  <ul class="social-content">
+                    <li><a href="mailto:mail@example.com"><i class="fa fa-envelope fa-fw"></i></a></li>
+                    <li><a href="#link"><i class="fa fa-twitter fa-fw"></i></a></li>
+                    <li><a href="#link"><i class="fa fa-facebook fa-fw"></i></a></li>
+                    <li><a href="#link"><i class="fa fa-linkedin fa-fw"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="row member-content">
+              <div class="col-sm-3 col-sm-offset-1 member-thumb">
+                <img class="img-responsive img-center img-thumbnail img-circle" src="https://image.freepik.com/vector-gratis/icono-aislado-personaje-avatar-masculino_24877-23105.jpg" alt="">
+                <h4>Mathias Debrun</h4>
+                <p class="title">FullStack Developer</p>
+              </div>
+              <div class="col-sm-7   ">
+                <div class="details">
+                  <p>  Me gustan los retos, en este curso he aprendido a trabajar duro y a perseverar para conseguir los objetivos. <br><br>Me gusta estar en constante evolución y superarme a mí mismo cada día.</p>
+                  <ul class="social-content">
+                    <li><a href="mailto:mail@example.com"><i class="fa fa-envelope fa-fw"></i></a></li>
+                    <li><a href="#link"><i class="fa fa-twitter fa-fw"></i></a></li>
+                    <li><a href="#link"><i class="fa fa-facebook fa-fw"></i></a></li>
+                    <li><a href="#link"><i class="fa fa-linkedin fa-fw"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
       <!-- Footer -->
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
@@ -336,5 +335,29 @@
       </div>
     </div>
   </div>
-</div>
+  <!-- jQuery -->
+  <script src="js/jquery.js"></script>
+
+
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/chart-area-demo.js"></script>
+  <script src="js/demo/chart-pie-demo.js"></script>
+
+
 </body>
+
+</html>

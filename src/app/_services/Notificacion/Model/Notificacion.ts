@@ -1,10 +1,11 @@
+import { trabajador } from "../../Trabajador/model/Trabajador";
+import { Prestamo } from "../../Prestamo/model/Prestamo";
+
 export class Notificacion{
-  constructor(
-    id: number,
-    mensaje: String,
-    leido: boolean,
-    codtrabajador:number,
-    codprestamo:number,
-    trabajadorrecibe:number
-  ){}
+    id: number;
+    mensaje: String;
+    leido: boolean;
+    codtrabajador:trabajador;
+    codprestamo:Prestamo;
+    trabajadorrecibe:trabajador;
 }

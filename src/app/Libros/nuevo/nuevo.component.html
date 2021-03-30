@@ -1,53 +1,90 @@
-<body id="page-top">
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Custom styles for this template-->
+  <link href="/src/assets/css/sb-admin-2.css" rel="stylesheet">
+  <!-- Custom fonts for this template -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+</head>
+
+<body id="page-top">
   <!-- Page Wrapper -->
   <div id="wrapper">
-
     <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/home">
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-book"></i>
         </div>
         <div class="sidebar-brand-text mx-3">Teilen Library</div>
       </a>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider my-0">
-
-      <!-- Nav Item - Home -->
-      <li class="nav-item">
-        <a class="nav-link" href="home">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Home</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="libros">
-          <i class="fas fa-fw fa-book-reader"></i>
-          <span>Libros</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="libros/nuevo">
-          <i class="fas fa-fw fa-book-medical"></i>
-          <span>Publicar Libro</span></a>
-      </li>
-
       <!-- Divider -->
       <hr class="sidebar-divider">
 
+      <!-- Nav Item - Pages Collapse Menu -->
 
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+          aria-controls="collapseTwo">
+          <i class="fas fa-fw fa-book-reader"></i>
+          <span>Libros</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Catalogo:</h6>
 
-      <!-- Sidebar Toggler (Sidebar) -->
-      <!-- <div class="text-center d-none d-md-inline">
-              <button class="rounded-circle border-0" id="sidebarToggle"></button>
-          </div> -->
+            <a class="collapse-item" href="libros/bestsellers">Best Sellers</a>
+            <a class="collapse-item" href="libros">Buscar Libros</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Nav Item - Utilities Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+          aria-expanded="true" aria-controls="collapseUtilities">
+          <i class="fas fa-swatchbook"></i>
+          <span>Prestamos</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Acciones:</h6>
+            <a class="collapse-item" href="libros/nuevo">Publicar Libro</a>
+
+          </div>
+        </div>
+      </li>
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item">
+        <a class="nav-link" href="noticias">
+          <i class="fas fa-newspaper"></i>
+          <span>Noticias</span></a>
+      </li>
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item">
+        <a class="nav-link" href="aboutus">
+          <i class="fa fa-users"></i>
+          <span>About us</span></a>
+      </li>
 
 
 
     </ul>
     <!-- End of Sidebar -->
+
 
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
@@ -151,7 +188,7 @@
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Marc Cuenca Díaz</span>
                 <img class="img-profile rounded-circle" src="assets/img/undraw_profile.svg">
               </a>
               <!-- Dropdown - User Information -->
@@ -177,6 +214,7 @@
 
         </nav>
         <!-- End of Topbar -->
+        <div class="container">
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
           <h1 class="h3 mb-0 text-gray-800">Nuevo Libro</h1>
@@ -187,35 +225,35 @@
     <h6 class="m-0 font-weight-bold text-primary">Datos del libro</h6>
   </div> -->
           <div class="card-body">
-            <form>
+            <form (ngSubmit)="onSubmit()">
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label><strong>Titulo</strong></label>
-                  <input type="text" class="form-control" required placeholder="Titulo">
+                  <input type="text" class="form-control" required placeholder="Titulo" id="titulo" [(ngModel)]="libro.titulo" name="titulo">
                 </div>
                 <div class="form-group col-md-6">
                   <label><strong>Genero</strong></label>
-                  <input type="text" class="form-control" required placeholder="Genero">
+                  <input type="text" class="form-control" required placeholder="Genero" id="genero" [(ngModel)]="libro.genero" name="genero">
                 </div>
                 <div class="form-group col-md-6">
                   <label><strong>Fecha</strong></label>
-                  <input type="text" class="form-control" required placeholder="Fecha">
+                  <input type="text" class="form-control" required placeholder="Fecha" id="fecha" [(ngModel)]="libro.fecha" name="fecha">
                 </div>
                 <div class="form-group col-md-6">
                   <label><strong>ISBN</strong></label>
-                  <input type="text" class="form-control" required placeholder="ISBN">
+                  <input type="text" class="form-control" required placeholder="ISBN" id="isbn" [(ngModel)]="libro.isbn" name="isbn">
                 </div>
                 <div class="form-group col-md-6">
                   <label><strong>Idioma</strong></label>
-                  <input type="text" class="form-control" required placeholder="Idioma">
+                  <input type="text" class="form-control" required placeholder="Idioma" id="idioma" [(ngModel)]="libro.idioma" name="idioma">
                 </div>
                 <div class="form-group col-md-6">
                   <label><strong>Editorial</strong></label>
-                  <input type="text" class="form-control" required placeholder="Editorial">
+                  <input type="text" class="form-control" required placeholder="Editorial" id="editorial" [(ngModel)]="libro.editorial" name="editorial">
                 </div>
                 <div class="form-group col-md-6">
                   <label><strong>Autor</strong></label>
-                  <input type="text" class="form-control" placeholder="Autor">
+                  <input type="text" class="form-control" placeholder="Autor" id="autor" [(ngModel)]="libro.autor" name="autor">
                 </div>
 
               </div>
@@ -273,5 +311,5 @@
       </div>
     </div>
   </div>
-
+</div>
 </body>

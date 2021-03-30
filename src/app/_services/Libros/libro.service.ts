@@ -15,7 +15,7 @@ export class LibroService {
   }
 
   createLibro(Libro: Object): Observable<Object>{
-    return this.http.post(`${this.baseUrls}`, Libro);
+    return this.http.post(`${this.baseUrlp}`, Libro);
   }
   updateLibro(id: number, value: any): Observable<Object>{
     return this.http.put(`${this.baseUrls}/${id}`, value);
@@ -25,6 +25,6 @@ export class LibroService {
 
   }
   getLibrosList(): Observable<any>{
-    return this.http.get(`${this.baseUrlp}`);
+    return this.http.get(`${this.baseUrlp}/`);
   }
 }

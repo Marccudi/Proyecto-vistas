@@ -1,8 +1,9 @@
+import { Ejemplar } from "../../Ejemplar/model/Ejemplar";
+
 export class sedeEmpresa{
-  constructor(
-    id: number,
-    nombre: String,
-    localidad: String,
-    codejemplar:number
-  ){}
+
+    id: number;
+    nombre: String;
+    localidad: String;
+    codejemplar:Ejemplar;
 }

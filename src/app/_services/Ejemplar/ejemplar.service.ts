@@ -11,20 +11,20 @@ export class EjemplarService {
   constructor(private http: HttpClient) { }
 
   getEjemplar(id: number): Observable<any>{
-    return this.http.get('$ {this.baseUrls}/${id}');
+    return this.http.get(`$ {this.baseUrls}/${id}`);
   }
 
   createEjemplar(Ejemplar: Object): Observable<Object>{
-    return this.http.post('${this.baseUrls}', Ejemplar);
+    return this.http.post(`${this.baseUrls}`, Ejemplar);
   }
   updateEjemplar(id: number, value: any): Observable<Object>{
-    return this.http.put('${this.baseUrls}/${id}', value);
+    return this.http.put(`${this.baseUrls}/${id}`, value);
   }
   deleteEjemplar(id: number): Observable<any>{
-    return this.http.delete('${this.baseUrls}/${id}', {responseType: 'text'});
+    return this.http.delete(`${this.baseUrls}/${id}`, {responseType: 'text'});
 
   }
   getEjemplarsList(): Observable<any>{
-    return this.http.get('${this.baseUrlp}');
+    return this.http.get(`${this.baseUrlp}`);
   }
 }

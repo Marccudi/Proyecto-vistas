@@ -1,8 +1,7 @@
+import { Ejemplar } from "../../Ejemplar/model/Ejemplar";
+
 export class voto{
-  constructor(
-    id: number,
-    opinion: String,
-    calificacion: number,
-    codejemplar:number
-  ){}
+    id: number;
+    opinion: String;
+    calificacion: number;
 }

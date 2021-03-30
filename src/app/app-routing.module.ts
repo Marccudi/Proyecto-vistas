@@ -12,6 +12,9 @@ import { RegisterComponent } from './Login/register/register.component';
 import { MainComponent } from './Main/main/main.component';
 import { MislibrosComponent } from './Empleado/mislibros/mislibros.component';
 import { PerfilComponent } from './Empleado/perfil/perfil.component';
+import { BestsellersComponent } from './Libros/bestsellers/bestsellers.component';
+import { NoticiasComponent } from './Noticias/noticias/noticias.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 const routes: Routes = [
   {path:'', pathMatch:'full', redirectTo:'login'},
@@ -23,10 +26,14 @@ const routes: Routes = [
   {path:'libros',component:LibrosComponent},
   {path:'libros/nuevo',component:NuevoComponent},
   {path:'libros/pedirlibro',component:PedirlibroComponent},
-  {path:'libros/voto',component:VotoComponent},
-  {path:'libros/perfillibro',component:PerfillibroComponent},
+  {path:'libros/pedirlibro/:id',component:PedirlibroComponent},
+  {path:'libros/voto/:id',component:VotoComponent},
+  {path:'libros/perfillibro/:id',component:PerfillibroComponent},
   {path:'usuario/perfil',component:PerfilComponent},
-  {path:'usuario/libros',component:MislibrosComponent}
+  {path:'usuario/libros',component:MislibrosComponent},
+  {path:'libros/bestsellers',component:BestsellersComponent},
+  {path:'noticias',component:NoticiasComponent},
+  {path:'aboutus',component:AboutUsComponent}
 ];
 
 @NgModule({

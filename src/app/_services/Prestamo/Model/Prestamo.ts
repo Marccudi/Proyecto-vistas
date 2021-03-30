@@ -1,11 +1,11 @@
+import { trabajador } from "../../Trabajador/Model/trabajador";
+import { Ejemplar } from "../../Ejemplar/Model/Ejemplar";
 export class Prestamo{
-  constructor(
-    id: number,
-    fechacaducidad: String,
-    fechaalta: String,
-    fechadevolución: String,
-    codejemplar:number,
-    trabajadorrecibe:number,
-    trabajadorpresta:number
-  ){}
+    id: number;
+    fechacaducidad: String;
+    fechaalta: String;
+    fechadevolución: String;
+    codejemplar:Ejemplar;
+    trabajadorrecibe:trabajador;
+    trabajadorpresta:trabajador;
 }

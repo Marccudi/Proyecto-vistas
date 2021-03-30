@@ -19,6 +19,7 @@ import { PedirlibroComponent } from './Libros/pedirlibro/pedirlibro.component';
 import { VotoComponent } from './Libros/voto/voto.component';
 import { authInterceptorProviders } from './_helpers/auth.interceptor';
 
+import { DataTablesModule } from "angular-datatables";
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { authInterceptorProviders } from './_helpers/auth.interceptor';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    DataTablesModule
   ],
   //providers: [],
   providers: [authInterceptorProviders],

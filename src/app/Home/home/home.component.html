@@ -1,66 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
 
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Custom styles for this template-->
+  <link href="/src/assets/css/sb-admin-2.css" rel="stylesheet">
+  <!-- Custom fonts for this template -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+</head>
 
 <body id="page-top">
-
-
   <!-- Page Wrapper -->
   <div id="wrapper">
-
     <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/home">
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-book"></i>
         </div>
         <div class="sidebar-brand-text mx-3">Teilen Library</div>
       </a>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider my-0">
-
-      <!-- Nav Item - Home -->
-      <li class="nav-item active">
-        <a class="nav-link" href="home">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Home</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="libros">
-          <i class="fas fa-fw fa-book-reader"></i>
-          <span>Libros</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="libros/nuevo">
-          <i class="fas fa-fw fa-book-medical"></i>
-          <span>Publicar Libro</span></a>
-      </li>
-
       <!-- Divider -->
       <hr class="sidebar-divider">
 
+      <!-- Nav Item - Pages Collapse Menu -->
 
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+          aria-controls="collapseTwo">
+          <i class="fas fa-fw fa-book-reader"></i>
+          <span>Libros</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Catalogo:</h6>
+            <a class="collapse-item" href="libros/bestsellers">Best Sellers</a>
+            <a class="collapse-item" href="libros">Buscar Libros</a>
+          </div>
+        </div>
+      </li>
 
-      <!-- Sidebar Toggler (Sidebar) -->
-      <!-- <div class="text-center d-none d-md-inline">
-              <button class="rounded-circle border-0" id="sidebarToggle"></button>
-          </div> -->
+      <!-- Nav Item - Utilities Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+          aria-expanded="true" aria-controls="collapseUtilities">
+          <i class="fas fa-swatchbook"></i>
+          <span>Prestamos</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Acciones:</h6>
+            <a class="collapse-item" href="libros/nuevo">Publicar Libro</a>
+
+          </div>
+        </div>
+      </li>
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item">
+        <a class="nav-link" href="noticias">
+          <i class="fas fa-newspaper"></i>
+          <span>Noticias</span></a>
+      </li>
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item">
+        <a class="nav-link" href="aboutus">
+          <i class="fa fa-users"></i>
+          <span>About us</span></a>
+      </li>
 
 
 
     </ul>
     <!-- End of Sidebar -->
-
     <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
+    <div id="content-wrapper" class="d-flex flex-column bg-home-image">
 
       <!-- Main Content -->
       <div id="content">
 
         <!-- Topbar -->
-        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-2 shadow">
 
           <!-- Sidebar Toggle (Topbar) -->
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -155,7 +185,7 @@
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Marc Cuenca Díaz</span>
                 <img class="img-profile rounded-circle" src="assets/img/undraw_profile.svg">
               </a>
               <!-- Dropdown - User Information -->
@@ -183,49 +213,35 @@
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
-        <div class="container-fluid">
-
-          <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Home</h1>
-          </div>
-
-          <!--Cartas-->
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Información</h6>
-                </div>
-                <div class="card-body">
-                  Gracias a esta aplicación puedes buscar un libro que quieras pedir prestado y prestar un libro que ya te hayas leeido.
-                  En la barra lateral tienes el apartado "Libros" para poder buscar un libro por cualquiera de sus caracteristicas que
-                  aparezcan en la tabla. El apartado "Publicar libro", como su nombre indica, te permite publicar tus libros que ya te hayas leeido
-                  y/o que no te importe prestarlos a algun compañero de t-systems.
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Usuario</h6>
-                </div>
-                <div class="card-body">
-                  Si alguien pide prestado tu libro te llegará una notificación con el nombre del usuario. La notificaciñon no desaparecerá hasta
-                  que te haya llegado el libro de vuelta. El la parte superior derecha tienes tu nombre de usuario y una vez dentro tendrás dos apartados.
-                  El primero te permite ver y modificar tu perfil excepto tu nombre, apellidos y correo electronico. En mis libros podras ver informacion
-                  sobre tus libros así como en que sede de T-Systems esta actualmente como el dia que el usuario tiene para devolverte el libro.
-                </div>
-              </div>
-            </div>
-
-
-
-          </div>
-
+        <div class="container">
 
         </div>
         <!-- /.container-fluid -->
+        <!-- Masthead-->
+
+
+        <div class="container h-100">
+          <div class="row h-100 align-items-center justify-content-center text-center">
+
+
+            <!-- Page Content -->
+            <section>
+              <div class="container">
+
+                <div class="col-lg-6 estilo-x">
+                  <h1 class="mt" style="color:#051e91"><strong>Teilen library</strong></h1>
+                  <h5 style="color:#07116b">
+                    <p><br> Es la plataforma que te ayudará a gestionar tus prestamos sin tener que desplazarte hasta la
+                      biblioteca.
+                      <br> <br> Teilen Library permite acceder al catálogo pudiendo filtrar por tus intereses, realizar
+                      prestamos y opinar sobre ellos.
+                      <br> <br> ¡El único requisito es ser un amante de la lectura!
+                  </h5>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
 
       </div>
       <!-- End of Main Content -->
@@ -270,8 +286,29 @@
       </div>
     </div>
   </div>
+  <!-- jQuery -->
+  <script src="js/jquery.js"></script>
 
+
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/chart-area-demo.js"></script>
+  <script src="js/demo/chart-pie-demo.js"></script>
 
 
 </body>
 
+</html>

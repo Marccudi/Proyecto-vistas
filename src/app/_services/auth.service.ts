@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import {TrabajadorService } from './Trabajador/trabajador.service';
 
 
 const AUTH_API = 'http://localhost:8181/';
@@ -39,6 +40,7 @@ export class AuthService {
   }
 
   loginT(username: string, password: string): Observable<any> {
+    TrabajadorService
     return this.http.post(AUTH_API + 'login', {
       username,
       password

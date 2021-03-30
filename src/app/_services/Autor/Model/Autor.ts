@@ -1,8 +1,9 @@
+import { Libros } from "../../Libros/model/Libros";
 export class Autor{
-  constructor(
-  id: number,
-  nombre: String,
-  apellido: String,
-  codlibro:number
-  ){}
+
+  id: number;
+  nombre: String;
+  apellido: String;
+  codlibro:Libros;
+
 }

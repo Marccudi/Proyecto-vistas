@@ -1,7 +1,7 @@
+import { Libros } from "../../Libros/model/Libros";
+
 export class Idioma{
-  constructor(
-    id: number,
-    nombre: String,
-    codlibro:number
-  ){}
+    id: number;
+    nombre: String;
+    codlibro:Libros;
 }
